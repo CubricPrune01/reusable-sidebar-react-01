@@ -1,5 +1,6 @@
 import React from 'react';
-import  * as s from './App.styles';
+import * as s from './App.styles';
+import * as Palette from './colors'
 
 //Components
 import Sidebar from './components/Sidebar/Sidebar.components';
@@ -8,7 +9,16 @@ import Mainview from './components/Mainview/Mainview.component';
 const App = () => {
 
   const backgroundImage = 'images/mountain.jpg';
-  const sidebarHeader = 'Yo Yo Travel';
+  const sidebarHeader = {
+    fullName: 'Yo Yo Travel',
+    shortName: 'YO'
+  };
+ 
+  const fonts = {
+    header: 'ZCOOL Kuaile',
+    menu: 'Poppins'
+  }
+ 
   const menuItems = [
     {name: 'Home', to: '/', icon: 'icons/home.svg', subMenuItems: []},
     {name: 'About', to: '/about', icon: 'icons/about.svg', subMenuItems: []},
@@ -23,11 +33,6 @@ const App = () => {
     {name: 'Contact', to: '/contact', icon: 'icons/contact.svg', subMenuItems: []}
   ];
 
-  const fonts = {
-    header: 'ZCOOL Kuaile',
-    menu: 'Poppins'
-  }
-
   return (
     <s.App>
       <Sidebar 
@@ -35,6 +40,7 @@ const App = () => {
         sidebarHeader={sidebarHeader}
         menuItems={menuItems}
         fonts={fonts}
+        colorPalette={Palette.preDark}
       />
       <Mainview />
     </s.App>
