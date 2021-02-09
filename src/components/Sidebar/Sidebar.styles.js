@@ -150,7 +150,7 @@ export const LinkedIcon = styled.div`
 
 export const LinkIconContainer = styled.div`
     position: absolute;
-    top: 90%;
+    top: 93%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
